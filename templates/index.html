@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='language.js') }}" defer></script> 
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="logo">Air<span>Pass</span></li>
+            <li><a href="#home" id="nav-home">Home</a></li>
+            <li><a href="#about" id="nav-about">About</a></li>
+            <li>
+                        <select id="language-selector" onchange="changeLanguage()">
+                    <option value="" disabled selected hidden>Language</option>
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="es">Spanish</option>
+                        </select>
+            </li>
+            <li><a href="#reviews" id="nav-reviews">Reviews</a></li>
+            <li><a href="#Contact"><button class="btn" id="btn-queue">Check Queue</button></a></li>
+        </ul>
+   </nav>
+   <section id="home" class="home">
+    <div class="carousel">
+      <div class="carousel-images" style="width: 300%; display: flex;">
+          <div style="width: 100vw; flex-shrink: 0;">
+              <img src="https://cdn.pixabay.com/photo/2019/11/10/10/04/airport-4615368_1280.jpg" alt="Airport 1">
+          </div>
+          <div style="width: 100vw; flex-shrink: 0;">
+              <img src="https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Airport 2">
+          </div>
+          <div style="width: 100vw; flex-shrink: 0;">
+              <img src="https://cdn.pixabay.com/photo/2016/07/13/20/41/airport-1515448_1280.jpg" alt="Airport 3">
+          </div>
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+   </section>
+   <section class="about" id="about">
+    <div class="pic">
+    
+    </div>
+    <div class="con">
+       <a href="" id="about-title">About us</a>
+       <br>
+       <br>
+       <p id="p">At AirPass, we are revolutionizing the airport experience by making security checkpoints faster, smoother, and more efficient. Our innovative solutions leverage advanced technology, smart processes, and seamless integrations to minimize wait times and enhance passenger convenience.</p>
+    </div>
+   </section>
+   <section class="reviews" id="reviews">
+    <h1 id="reviews-title">SATISFIED&nbsp;&nbsp;CLIENTS</h1>
+    <div class="lp">
+       <div class="r1">
+        <img src="{{ url_for('static', filename='f1.jfif') }}" height="90px" width="90px" alt="Image">
+        <br>
+        Smooth navigation, quick updates, and hassle-free! 
+        <img src="{{ url_for('static', filename='stars.png') }}" height="50px" width="50px" alt="Stars" class="stars">
+        <p class="p2">JOHN DEO</p>
+          <p class="p3">Satisfied Client</p>
+       </div>
+       <div class="r2">
+        <img src="{{ url_for('static', filename='f2.jfif') }}" height="90px" width="90px" alt="Image">
+        <br>
+        Clear layout, real-time flight info, and easy accessibility! 
+        <img src="{{ url_for('static', filename='stars.png') }}" height="50px" width="50px" alt="Stars" class="stars">
+        <p class="p2">JASSICA M</p>
+          <p class="p3">Satisfied Client</p>
+       </div>
+       <div class="r3">
+        <img src="{{ url_for('static', filename='f3.jfif') }}" height="90px" width="90px" alt="Image">
+        <br>
+        Fast loading, well-organized, and very user!
+        <img src="{{ url_for('static', filename='stars.png') }}" height="50px" width="50px" alt="Stars" class="stars">
+        <p class="p2">DAVID L</p>
+          <p class="p3">Satisfied Client</p>
+       </div> 
+    </div>
+    <div class="lp2">
+        <div class="r4">
+            <img src="{{ url_for('static', filename='f1.jfif') }}" height="90px" width="90px" alt="Image">
+         <br>
+         Helpful features, great design, and seamless travel! 
+         <img src="{{ url_for('static', filename='stars.png') }}" height="50px" width="50px" alt="Stars" class="stars">
+         <p class="p2">EMILY R</p>
+           <p class="p3">Satisfied Client</p>
+        </div>
+        <div class="r5">
+            <img src="{{ url_for('static', filename='f2.jfif') }}" height="90px" width="90px" alt="Image">
+         <br>
+         Informative, efficient, and perfect for stress-free!
+         <img src="{{ url_for('static', filename='stars.png') }}" height="50px" width="50px" alt="Stars" class="stars">
+         <p class="p2">MARK T</p>
+           <p class="p3">Satisfied Client</p>
+        </div>
+        <div class="r6">
+            <img src="{{ url_for('static', filename='f3.jfif') }}" height="90px" width="90px" alt="Image">
+         <br>
+         Easy to use, visually appealing, and highly!
+         <img src="{{ url_for('static', filename='stars.png') }}" height="50px" width="50px" alt="Stars" class="stars">
+         <p class="p2">MICHAEL S</p>
+           <p class="p3">Satisfied Client</p>
+        </div> 
+     </div>
+   </section>
+
+   <section class="Contact" id="Contact">
+    <h1 id="contact-title">CHECK QUEUE</h1>
+    <form action="/" method="post"> 
+        <table>
+            <tr><td><label id="label-name">Your Name:</label></td></tr>
+            <tr><td><input type="text" name="nm" class="box" placeholder="enter your name"></td></tr>
+            <tr><td><br></td></tr>
+            <tr><td><label id="label-email">Your Email:</label></td></tr>
+            <tr><td><input type="email" name="em" class="box" placeholder="enter your email"></td></tr>
+            <tr><td><br></td></tr>
+            <tr><td><label id="label-number">Your Number:</label></td></tr>
+            <tr><td><input type="number" name="no" class="box" placeholder="enter your number"></td></tr>
+            <tr><td><br></td></tr>
+            <tr><td><label>Appoinment Date:</label></td></tr>
+            <tr><td><input type="datetime-local" name="date" class="box"></td></tr>
+            <tr><td><br></td></tr>
+            <tr><td><label id="label-ticket">Your Ticket Number:</label></td></tr>
+            <tr><td><input type="text" name="tn" class="box" placeholder="Enter your ticket no:"></td></tr>
+            <tr><td><br></td></tr>
+            <tr><td><button class="bt4" id="btn-check">Check Queue</button></td></tr>
+        </table>
+    </form>
+   </section>
+   
+   <section id="tb">
+    <h2>Queue List</h2>
+       <table>
+           <thead>
+               <tr>
+                   <th>Name</th>
+               </tr>
+           </thead>
+           <tbody>
+               {% for row in queue_data %}
+                   <tr>
+                       <td>{{ row[0] }}</td>  <!-- Only Name -->
+                   </tr>
+               {% endfor %}
+           </tbody>
+       </table>
+   </section>
+</body>
+</html>

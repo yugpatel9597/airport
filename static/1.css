@@ -1,0 +1,169 @@
+@media screen and (max-width: 768px) {
+
+    /* Navbar: Stack Items Vertically */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 10px;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+        display: block;
+    }
+
+    /* Carousel: Adjust Image Height */
+    .carousel img {
+        height: 300px; /* Reduce height for mobile */
+    }
+
+    /* Carousel Buttons */
+    .prev, .next {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    /* Home Section */
+    .home {
+        min-height: 400px;
+    }
+
+    /* Adjust Content Section */
+    .con {
+        width: 90%;
+        text-align: center;
+        font-size: medium;
+        padding: 10px;
+    }
+
+    /* About Section */
+    .about {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    /* Contact Form */
+    .Contact form {
+        width: 90%;
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 15px;
+        height: auto;
+    }
+    .Contact h1 {
+        font-size: 5vh;
+        text-align: center;
+    }
+    /* Review Section */
+    .reviews {
+        height: auto;
+        padding: 20px;
+    }
+
+    /* Adjust Review Boxes */
+    .lp, .lp2 {
+        flex-direction: column; 
+        align-items: center; 
+        width: 100%; 
+        margin: 0; 
+        padding: 10px;
+    }
+
+    .r1, .r2, .r3, .r4, .r5, .r6 {
+        width: 90%;
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+
+    #tb {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+    /* Image Adjustments */
+    .lp img, .lp2 img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    table {
+        width: 100%;
+        min-width: 300px;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: center;
+        word-wrap: break-word;
+    }
+    /* Buttons */
+    .bt4 {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Fix Review Section */
+    .reviews {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .r1, .r2, .r3, .r4, .r5, .r6 {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 10px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Ensure Images Don't Overflow */
+    .r1 img, .r2 img, .r3 img, .r4 img, .r5 img, .r6 img {
+        width: 100%;
+        height: auto;
+        max-height: 120px; /* Limit height */
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    /* Fix Star Ratings */
+    .stars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+    }
+
+    /* Fix Contact Form */
+    .Contact form {
+        width: 90%;
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    .Contact input, .Contact select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    /* Reduce Font Size of Large Text */
+    .reviews h1 {
+        font-size: 4vh;
+        margin-bottom: 10px;
+    }
+} 
